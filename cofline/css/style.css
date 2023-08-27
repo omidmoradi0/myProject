@@ -1,0 +1,528 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+:root {
+    --main-color: #7a3e3e;
+    --second-color: #482121;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Caveat", cursive;
+    z-index: 1;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    overflow-x: hidden;
+    filter: drop-shadow(1px solid black);
+    visibility: hidden;
+}
+
+.info,
+header {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    background-color: var(--main-color);
+    color: #eeeeee;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.baby-info {
+    flex: 1;
+}
+
+.logo {
+    width: 5%;
+    height: auto;
+}
+
+header {
+    position: absolute;
+    width: 100vw;
+    z-index: 2;
+}
+
+.head-bar {
+    display: flex;
+    width: 100%;
+}
+
+.fa-bars {
+    text-align: right;
+    flex: 1;
+    align-self: center;
+    padding-right: 2%;
+    display: none;
+}
+
+#menu-icon {
+    display: none;
+}
+
+.menu {
+    flex: 1;
+    align-self: center;
+    text-align: right;
+}
+
+.menu ul li {
+    list-style: none;
+    vertical-align: middle;
+    padding-right: 2%;
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.menu ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--second-color);
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.menu ul li:hover::after {
+    width: 100%;
+}
+
+.header {
+    height: 100%;
+    width: 100%;
+}
+
+.img-head {
+    width: 100%;
+    height: 100%;
+    max-height: 800px;
+    filter: blur(2px);
+    transition: 2s;
+}
+
+.img-head:hover {
+    filter: blur(0px);
+}
+
+.img-text {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--white);
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    z-index: 1;
+    width: 40%;
+    height: 50vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.img-text h1 {
+    font-size: 2em;
+}
+
+.img-text p {
+    margin-top: 5%;
+}
+
+.title-heading {
+    display: block;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 87.5%;
+    left: 50%;
+    font-size: 2.5em;
+    color: var(--white);
+    transform: translate(-50%, -50%);
+}
+
+.title-heading:hover {
+    transition: all 0.5s ease-in;
+    color: rgb(252, 90, 41);
+}
+
+.newest {
+    height: 55vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.offer-list {
+    width: 200%;
+    height: 55vh;
+    position: relative;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    transition: 1s;
+}
+
+.tag {
+    font-size: 2.5em;
+    width: 100%;
+    text-align: center;
+    color: var(--second-color);
+    margin-top: 2%;
+    border-radius: 200px;
+    display: flex;
+    &:before,
+    &:after {
+        content: "";
+        flex: 1;
+    }
+}
+
+.line {
+    align-items: center;
+    &:before,
+    &:after {
+        height: 1px;
+        margin: 0 1em;
+    }
+}
+
+.one-line {
+    &:before,
+    &:after {
+        background: var(--second-color);
+    }
+}
+
+.fa-bars {
+    display: block;
+}
+
+.product {
+    width: 10%;
+    height: 50vh;
+    background-color: #d0b49f;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    text-align: center;
+    transition: 1s;
+    display: flex;
+    flex-flow: column;
+}
+
+.product img,
+.new-product img {
+    flex: 1;
+    justify-self: end;
+}
+
+.product p,
+.new-product p {
+    flex: 1;
+    justify-self: end;
+    font-size: 1em;
+}
+
+.product h4,
+.new-product h4 {
+    flex: 1;
+    justify-self: end;
+    font-size: 1.5em;
+}
+
+.count-links {
+    flex: 1;
+    justify-self: end;
+    transition: 0.5s;
+    color: var(--white);
+}
+
+.count-links:hover {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.count-links i {
+    transition: 0.5s;
+}
+
+.count-links i:hover {
+    color: red;
+}
+
+.img-product {
+    width: 100%;
+    height: 50%;
+}
+
+.new-product {
+    width: 16%;
+    height: 50vh;
+    background-color: var(--main-color);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    display: flex;
+    flex-flow: column;
+}
+
+.title-product {
+    font-size: 1.2em;
+    color: var(--white);
+    margin-top: 1%;
+}
+
+.caption-product {
+    color: var(--white);
+    font-size: 0.7em;
+}
+
+.comments-section {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 2%;
+}
+
+.comments {
+    text-align: center;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+    margin: 0 20px;
+}
+
+.comment-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#last-comments {
+    display: flex;
+}
+
+.comment-box {
+    width: 25%;
+    height: 20%;
+    margin: 20px;
+    /* background-color: var(--second-color); */
+    display: none;
+    border: 1px solid #d0b49f;
+    box-shadow: #482121b7 -5px 5px, #4821218a -10px 10px, #4821216b -15px 15px, #48212138 -20px 20px, #48212118 -25px 25px;
+    padding: 20px;
+}
+
+.image-holder {
+    flex: 1;
+}
+
+.comment-text {
+    flex: 5;
+    text-align: left;
+}
+
+.user-image {
+    width: 90%;
+    border: 1px solid var(--main-color);
+    border-radius: 100%;
+}
+
+.commneter {
+    font-size: 1.1em;
+}
+
+.contact-box {
+    display: flex;
+    color: var(--second-color);
+}
+
+.img-coffeeshop {
+    width: 50%;
+    flex: 1;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #d0b49f;
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--main-color);
+}
+
+.container {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+/* title animation */
+
+.waviy {
+    position: relative;
+}
+
+.waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 5s infinite;
+    animation-delay: calc(0.4s * var(--i));
+}
+
+.loader-holder {
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    visibility: visible;
+    top: 30%;
+}
+
+.loader {
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes flip {
+    0%,
+    80% {
+        transform: rotateY(360deg);
+    }
+}
+
+#mobile-menu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #d0b49f;
+    display: none;
+    transition: 1s;
+    z-index: 4;
+    padding: 10px;
+}
+
+.menu-head {
+    width: 90%;
+    height: 10%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    color: var(--white);
+}
+
+.menu-head p {
+    text-align: right;
+    font-size: 4em;
+}
+
+.menu-head i {
+    flex: 1;
+    text-align: right;
+    font-size: 4em;
+    margin-bottom: 20%;
+}
+
+
+/* responsive */
+
+@media only screen and (min-height: 1201px) {
+    .img-text {
+        top: 25%;
+        height: 25%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .img-text {
+        width: 40%;
+        height: 20vh;
+        top: 25%;
+    }
+}
+
+@media only screen and (max-width: 632px) {
+    body {
+        font-size: 10px;
+    }
+    header,
+    .info {
+        width: 100%;
+        height: 5vh;
+        position: relative;
+    }
+    .header {
+        display: none;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .newest {
+        height: 27vh;
+    }
+    .new-product {
+        height: 25vh;
+        padding: 5px;
+    }
+    .product {
+        width: 10%;
+        height: 25vh;
+        padding: 1%;
+    }
+    .offer-list {
+        width: 200%;
+        height: 30vh;
+    }
+    .comment-holder {
+        flex-direction: column;
+    }
+    .comment-box {
+        width: 80%;
+        height: 10%;
+    }
+    .img-coffeeshop {
+        display: none;
+    }
+    .logo {
+        width: 10%;
+    }
+}
